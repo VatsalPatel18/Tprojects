@@ -1,0 +1,13 @@
+[
+  {
+    "text": "What's the weather like in London today?",
+    "intent": "get_current_weather",
+    "location": "London"
+  },
+  {
+    "text": "Tell me the forecast for New York for the next week.",
+    "intent": "get_forecast",
+    "location": "New York"
+  },
+  // ... more examples
+]
