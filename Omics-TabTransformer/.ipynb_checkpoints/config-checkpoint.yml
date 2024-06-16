@@ -1,0 +1,45 @@
+model:
+  embedding_dims: 16
+  num_transformer_blocks: 3
+  num_heads: 4
+  mlp_hidden_units_factors:
+    - 2
+    - 1
+  dropout_rate: 0.2
+  use_column_embedding: False
+
+training:
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  batch_size: 265
+  num_epochs: 15
+
+data:
+  train_data_file: "data/train_data.csv"
+  test_data_file: "data/test_data.csv"
+  csv_header:
+    - "age"
+    - "workclass"
+    - "fnlwgt"
+    - "education"
+    - "education_num"
+    - "marital_status"
+    - "occupation"
+    - "relationship"
+    - "race"
+    - "gender"
+    - "capital_gain"
+    - "capital_loss"
+    - "hours_per_week"
+    - "native_country"
+    - "income_bracket"
+  target_labels:
+    - " <=50K"
+    - " >50K"
+  weight_column_name: "fnlwgt"
+  numerical_feature_names:
+    - "age"
+    - "education_num"
+    - "capital_gain"
+    - "capital_loss"
+    - "hours_per_week"
