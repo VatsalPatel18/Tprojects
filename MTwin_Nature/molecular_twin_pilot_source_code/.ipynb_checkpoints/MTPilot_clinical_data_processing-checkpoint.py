@@ -218,8 +218,7 @@ ax.figure.savefig("MTPilot_tnm_stage.png", bbox_inches='tight')
 latestPatientUpdate['Chemo or Surgery Date First'] = np.where(latestPatientUpdate["Day of 1st Chemotherapy"].isna(), 'None', latestPatientUpdate['Chemo or Surgery Date First'])
 latestPatientUpdate.rename(columns={'Chemo or Surgery Date First': 'Chemotherapy_Type', 'Biobank ID': 'Biobank_Number'}, inplace=True)
 latestPatientUpdate['Chemotherapy_Type'] = latestPatientUpdate['Chemotherapy_Type'].map({'None': 'None', 'surgery': 'Adjuvant', 'chemo': 'Neoadjuvant'})
-clinicalAllMergedWithUpdate =
- clinicalAllMerged.merge(latestPatientUpdate, on='Biobank_Number')
+clinicalAllMergedWithUpdate = clinicalAllMerged.merge(latestPatientUpdate, on='Biobank_Number')
 
 ax = clinicalAllMergedWithUpdate["Chemotherapy_Type"].value_counts().sort_values().plot(kind='bar', figsize=(10,8), fontsize=14)
 ax.set_xlabel("Chemotherapy", fontsize=18)
