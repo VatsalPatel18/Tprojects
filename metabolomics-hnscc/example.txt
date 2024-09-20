@@ -1,0 +1,1 @@
+./run_rag_classic_ml.sh --data_dir ./new_data --latent_dim 3 --epochs 15 --batch_size 64
