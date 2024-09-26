@@ -1,0 +1,7 @@
+Log Rank Test Results for Survival
+0 vs 1 :  0.06 
+0 vs 2 :  0.72 
+0 vs 3 :  0.65 
+1 vs 2 :  0.82 
+1 vs 3 :  0.05 
+2 vs 3 :  0.68 

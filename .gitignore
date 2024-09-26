@@ -6,6 +6,8 @@
 *.gguf filter=lfs diff=lfs merge=lfs -text
 *.csv filter=lfs diff=lfs merge=lfs -text
 
+*.h5
+
 # This entry ignores large .pth files
 *.pth
 !*.pth[1-9][0-9].pth
